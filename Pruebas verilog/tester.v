@@ -3,12 +3,13 @@ module tester (
     output reg x, y
 );
 
-  reg contador;
+  integer contador;
 
   initial begin
     contador = 0;
     
-    for (contador = 0; contador < 1; contador = contador + 1) begin
+    for (contador = 0; contador < 1; contador = contador + 1)
+    begin
       x = contador;
       y = 1;
     end
