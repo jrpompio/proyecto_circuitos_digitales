@@ -6,8 +6,8 @@ input wire eq;
 output reg x,y;
 
 initial begin
-    x=1;
-    y=1;
+    x=11;
+    y=10;
 end
 
 endmodule

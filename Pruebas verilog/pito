@@ -7,54 +7,54 @@
 :vpi_module "C:\tools\Verilog\iverilog\lib\ivl\vhdl_textio.vpi";
 :vpi_module "C:\tools\Verilog\iverilog\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\tools\Verilog\iverilog\lib\ivl\va_math.vpi";
-S_000002184486a2f0 .scope module, "testbench" "testbench" 2 4;
+S_000001e4778fa120 .scope module, "testbench" "testbench" 2 4;
  .timescale 0 0;
-v00000218448669d0_0 .net "eq", 0 0, L_0000021844867080;  1 drivers
-v00000218446ff9b0_0 .net "x", 0 0, v0000021844866890_0;  1 drivers
-v00000218446fff50_0 .net "y", 0 0, v0000021844866930_0;  1 drivers
-S_00000218446b5a40 .scope module, "culopanochoteta" "comparador1bit" 2 10, 3 1 0, S_000002184486a2f0;
+v000001e4778f68c0_0 .net "eq", 0 0, L_000001e4778f6dd0;  1 drivers
+v000001e4777f0290_0 .net "x", 0 0, v000001e4778f6780_0;  1 drivers
+v000001e4777f0650_0 .net "y", 0 0, v000001e4778f6820_0;  1 drivers
+S_000001e4777a5980 .scope module, "culopanochoteta" "comparador1bit" 2 10, 3 1 0, S_000001e4778fa120;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "x";
     .port_info 1 /INPUT 1 "y";
     .port_info 2 /OUTPUT 1 "eq";
-L_00000218446b5e50 .functor NOT 1, v0000021844866890_0, C4<0>, C4<0>, C4<0>;
-L_0000021844869d00 .functor NOT 1, v0000021844866930_0, C4<0>, C4<0>, C4<0>;
-L_000002184486d2e0 .functor AND 1, L_00000218446b5e50, L_0000021844869d00, C4<1>, C4<1>;
-L_0000021844869f30 .functor AND 1, v0000021844866890_0, v0000021844866930_0, C4<1>, C4<1>;
-L_0000021844867080 .functor OR 1, L_000002184486d2e0, L_0000021844869f30, C4<0>, C4<0>;
-v0000021844869e90_0 .net *"_ivl_0", 0 0, L_00000218446b5e50;  1 drivers
-v0000021844869c60_0 .net *"_ivl_2", 0 0, L_0000021844869d00;  1 drivers
-v00000218446b5bd0_0 .net "eq", 0 0, L_0000021844867080;  alias, 1 drivers
-v00000218446b5c70_0 .net "s0", 0 0, L_000002184486d2e0;  1 drivers
-v00000218446b5d10_0 .net "s1", 0 0, L_0000021844869f30;  1 drivers
-v00000218446b5db0_0 .net "x", 0 0, v0000021844866890_0;  alias, 1 drivers
-v00000218448665c0_0 .net "y", 0 0, v0000021844866930_0;  alias, 1 drivers
-S_0000021844866660 .scope module, "panochoculoteta" "tester" 2 11, 4 1 0, S_000002184486a2f0;
+L_000001e4777a5d90 .functor NOT 1, v000001e4778f6780_0, C4<0>, C4<0>, C4<0>;
+L_000001e4778fd300 .functor NOT 1, v000001e4778f6820_0, C4<0>, C4<0>, C4<0>;
+L_000001e4778f9d60 .functor AND 1, L_000001e4777a5d90, L_000001e4778fd300, C4<1>, C4<1>;
+L_000001e4778f7090 .functor AND 1, v000001e4778f6780_0, v000001e4778f6820_0, C4<1>, C4<1>;
+L_000001e4778f6dd0 .functor OR 1, L_000001e4778f9d60, L_000001e4778f7090, C4<0>, C4<0>;
+v000001e4778f9cc0_0 .net *"_ivl_0", 0 0, L_000001e4777a5d90;  1 drivers
+v000001e4778fbe50_0 .net *"_ivl_2", 0 0, L_000001e4778fd300;  1 drivers
+v000001e4778fa2b0_0 .net "eq", 0 0, L_000001e4778f6dd0;  alias, 1 drivers
+v000001e4778fa350_0 .net "s0", 0 0, L_000001e4778f9d60;  1 drivers
+v000001e4777a5b10_0 .net "s1", 0 0, L_000001e4778f7090;  1 drivers
+v000001e4777a5bb0_0 .net "x", 0 0, v000001e4778f6780_0;  alias, 1 drivers
+v000001e4777a5c50_0 .net "y", 0 0, v000001e4778f6820_0;  alias, 1 drivers
+S_000001e4778f65f0 .scope module, "panochoculoteta" "tester" 2 11, 4 1 0, S_000001e4778fa120;
  .timescale 0 0;
     .port_info 0 /OUTPUT 1 "x";
     .port_info 1 /OUTPUT 1 "y";
     .port_info 2 /INPUT 1 "eq";
-v00000218448667f0_0 .net "eq", 0 0, L_0000021844867080;  alias, 1 drivers
-v0000021844866890_0 .var "x", 0 0;
-v0000021844866930_0 .var "y", 0 0;
-    .scope S_0000021844866660;
+v000001e4777a5cf0_0 .net "eq", 0 0, L_000001e4778f6dd0;  alias, 1 drivers
+v000001e4778f6780_0 .var "x", 0 0;
+v000001e4778f6820_0 .var "y", 0 0;
+    .scope S_000001e4778f65f0;
 T_0 ;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0000021844866890_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0000021844866930_0, 0, 1;
+    %store/vec4 v000001e4778f6780_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e4778f6820_0, 0, 1;
     %end;
     .thread T_0;
-    .scope S_000002184486a2f0;
+    .scope S_000001e4778fa120;
 T_1 ;
     %vpi_call 2 7 "$dumpvars" {0 0 0};
-    %vpi_call 2 8 "$monitor", "x=%b y=%b eq=%b", v00000218446ff9b0_0, v00000218446fff50_0, v00000218448669d0_0 {0 0 0};
+    %vpi_call 2 8 "$monitor", "x=%b y=%b eq=%b", v000001e4777f0290_0, v000001e4777f0650_0, v000001e4778f68c0_0 {0 0 0};
     %end;
     .thread T_1;
 # The file index is used to find the file name in the following table.
 :file_names 5;
     "N/A";
     "<interactive>";
-    "testbench.v";
+    ".\testbench.v";
     "./comparador1bit.v";
     "./tester.v";
