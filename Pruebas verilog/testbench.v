@@ -2,7 +2,7 @@
 `include "tester.v"
 
 module testbench;
-reg x0, y0, eq0;
+wire x0, y0, eq0;
 initial begin
 $dumpvars;
 $monitor("x=%b y=%b eq=%b", x0, y0, eq0);
