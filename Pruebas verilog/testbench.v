@@ -2,11 +2,11 @@
 `include "tester.v"
 
 module testbench;
-wire x, y, eq;
+reg x0, y0, eq0;
 initial begin
 $dumpvars;
-$monitor("x=%b y=%b eq=%b", x, y, eq);
+$monitor("x=%b y=%b eq=%b", x0, y0, eq0);
 end
-comparador1bit culopanochoteta(.x(x), .y(y), .eq(eq));
-tester    panochoculoteta(.x(x), .y(y), .eq(eq));
+comparador1bit culopanochoteta(.x(x0), .y(y0), .eq(eq0));
+tester    panochoculoteta(.x(x0), .y(y0), .eq(eq0));
 endmodule

@@ -1,13 +1,17 @@
-module tester(
-    x,y,eq
+module tester (
+    input wire eq,
+    output reg x, y
 );
 
-input wire eq;
-output reg x,y;
+  reg contador;
 
-initial begin
-    x=11;
-    y=10;
-end
+  initial begin
+    contador = 0;
+    
+    for (contador = 0; contador < 1; contador = contador + 1) begin
+      x = contador;
+      y = 1;
+    end
+  end
 
 endmodule
