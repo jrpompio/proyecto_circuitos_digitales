@@ -3,5 +3,7 @@
 *.png
 *.bat
 *.dot
+*.out
+*.salida
 Proyecto\Derecha-izquierda\noinicial.v
 Proyecto\Derecha-izquierda\inicial.v
