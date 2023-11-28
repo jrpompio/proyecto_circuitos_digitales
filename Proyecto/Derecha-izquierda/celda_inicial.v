@@ -1,4 +1,5 @@
-module Inicial_DI(A, B, N
+module Inicial_DI(
+    A, B, N
 );
 
 input wire A,B;

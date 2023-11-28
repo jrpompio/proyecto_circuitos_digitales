@@ -1,4 +1,4 @@
-module noInicial_DI(
+module Final_DI(
     n, A, B, Z
 );
 

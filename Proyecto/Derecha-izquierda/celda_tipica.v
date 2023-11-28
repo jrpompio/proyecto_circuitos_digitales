@@ -1,4 +1,4 @@
-module noInicial_DI(
+module Tipica_DI(
     n, A, B, N
 );
 
