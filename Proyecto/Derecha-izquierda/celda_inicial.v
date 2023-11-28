@@ -1,10 +1,11 @@
-module Inicial_DI(
-    A, B, N
+module Inicial_DI (
+  input wire A, B,
+  output wire N
 );
 
-input wire A,B;
-output wire N;
+  wire Z; // Cable para conectar la salida de not con la entrada de or
 
-assign N = ~A | B;
-
+  // Instanciación de la compuerta NOT
+  not notgate(Z,A);
+  or orgate(N,Z,B);
 endmodule
