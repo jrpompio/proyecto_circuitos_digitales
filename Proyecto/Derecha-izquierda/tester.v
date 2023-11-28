@@ -7,6 +7,8 @@ output reg A_valor, B_valor;
 
 /*  A = 1001
     B = 0101
+
+    hola
 */
 initial begin
     A_valor=1;
