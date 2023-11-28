@@ -13,9 +13,9 @@ assign s2 = n & s1;
 assign N = s2 | s0;
 
 /* Se tiene que: 
- N = s2 | s0 
-= n & s1 | ~A & B 
-= n & (~A | B) | ~A & B
+N = s2 | s0 
+N = n & s1 | ~A & B 
+N = n & (~A | B) | ~A & B
 */
 
 endmodule
