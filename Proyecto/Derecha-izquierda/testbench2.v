@@ -38,9 +38,23 @@ initial begin // Initial para mostrar datos en pantalla
       A_t = A0[i];
       B_t = B0[i];
       Z_t = N0[i];
-      #20;
+      #10;
     end
   $finish;
   end
+
+  // Obteniendo bit a bit para gráficar con gtkwave
+  initial begin // Initial para mostrar datos en pantalla
+   $dumpfile("resultado.vcd");
+   $dumpvars(1,testbench);
+   for (i = 0; i < K; i = i + 1) begin
+      A_t = A0[i];
+      B_t = B0[i];
+      Z_t = N0[i];
+      #10;
+    end
+  $finish;
+  end
+
 
 endmodule
