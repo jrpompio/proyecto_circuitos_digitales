@@ -5,12 +5,13 @@ module Final_DI(
 input wire n, A, B; // definición de entradas de la celda
 output wire Z; // definición de salidas de la celda
 
-wire s0, s1, s2; //equivalencias para la función
+wire notA, s0, s1, s2; //equivalencias para la función
 
-assign s0 = ~A & B;
-assign s1 = ~A | B;
-assign s2 = n & s1;
-assign Z = s2 | s0;
+not not_gate(notA, A);
+or or_gate(s1, notA, B);
+and and_gate(s0, notA, B);
+and and_gate2(s2, n, s1);
+or or_gate2(Z, s2, s0);
 
 /* Se tiene que: 
 Z = s2 | s0 

@@ -11,12 +11,11 @@ not not_gate(notA, A);
 or or_gate(s1, notA, B);
 and and_gate(s0, notA, B);
 and and_gate2(s2, n, s1);
-or or_gate2(N, s2, s0)
+or or_gate2(N, s2, s0);
 
 /* Se tiene que: 
 N = s2 | s0 
 N = n & s1 | ~A & B 
 N = n & (~A | B) | ~A & B
 */
-
 endmodule
