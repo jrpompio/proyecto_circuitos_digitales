@@ -6,5 +6,8 @@ module  tester #(parameter K = 1) (
   initial begin
     A_valor = 4'b1111; // se definen los valores a usar
     B_valor = 4'b1111; 
+    #10;
+    A_valor = 4'b1101 ; // se definen los valores a usar
+    B_valor = 4'b1011;
   end
 endmodule
