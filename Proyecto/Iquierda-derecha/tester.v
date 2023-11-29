@@ -9,5 +9,8 @@ module  tester #(parameter K = 1) (
     #10;
     A_valor = 4'b1101 ; // se definen los valores a usar
     B_valor = 4'b1011;
+    #10;
+    A_valor = 4'b0000 ; // se definen los valores a usar
+    B_valor = 4'b1011;
   end
 endmodule
