@@ -8,7 +8,7 @@ output wire Z; // definición de salidas de la celda
 wire s0, s1;
 
 assign s0 = ~A | B; 
-assign s1 = n & s2;
-assign Z = ~m | s3;
+assign s1 = n & s0;
+assign Z = ~m | s1;
 
 endmodule
