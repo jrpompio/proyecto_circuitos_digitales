@@ -17,3 +17,4 @@ assign N = ~m | s3
 M = ~n | m & (A | ~B) y 
 N = ~m | n & (~A | B)
 */
+endmodule
