@@ -1,13 +1,10 @@
 module  tester #(parameter K = 1) (
-    A_valor, B_valor
+    A_valor, B_valor // Se definen los valores de salida
 );
-  // Input wire N;
-    output reg [K-1:0] A_valor, B_valor; // Cambiado a 2 bits
-  /*  A = 10
-      B = 01
-  */
+    output reg [K-1:0] A_valor, B_valor; // Tamaño de los valores
+
   initial begin
-    A_valor = 4'b1111; // Representa el número binario 10 en 2 bits
-    B_valor = 4'b1111; // Representa el número binario 01 en 2 bits
+    A_valor = 4'b1111; // se definen los valores a usar
+    B_valor = 4'b1111; 
   end
 endmodule
