@@ -51,8 +51,8 @@ module red_iterativa
     .n(N[1]),  // entrada n celda final; Salida ultima celda tipica
     .A(A[0]), // Entrada A para celda final
     .B(B[0]), // Entrada B para celda final
-    .Z(Z) // Salida N para Celda final
+    .Z(N[0]) // Salida N para Celda final
   );          // Que se usará para obtener el valor Z
   // end
-
+assign Z = N[0]; // Se asiga el ultimo valor de N a Z
 endmodule

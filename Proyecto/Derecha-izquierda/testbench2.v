@@ -8,6 +8,8 @@ localparam K = 4; // definición de parametro
 wire [K-1:0] A0, B0, N0; // Se define la cantidad de pines A, B y N
 reg clk; // Se define reg para declarar el reloj
 wire Z; // Se define el pin Z
+reg A_t, B_t, Z_t;
+integer i;
 
 always // bloque always para ciclar el reloj
 begin
@@ -16,19 +18,6 @@ begin
   clk = 1'b0;
   #10;
 end
-
-
-initial begin // Initial para mostrar datos en pantalla
-    $dumpvars;
-    $monitor(
-    "\n Los valores ingresados son:",
-    "\n A=%b B=%b Z=%b \n",
-    A0,
-    B0,
-    Z);
-    #40;
-    $stop;
-  end
 
   tester #(K) instancia_datos( // Uso del tester
     .A_valor(A0),
@@ -41,5 +30,17 @@ initial begin // Initial para mostrar datos en pantalla
     .N(N0),
     .Z(Z)
   );
+
+initial begin // Initial para mostrar datos en pantalla
+   $dumpfile("resultado.vcd");
+   $dumpvars(1,testbench);
+   for (i = 0; i < 4; i = i + 1) begin
+      A_t = A0[i];
+      B_t = B0[i];
+      Z_t = N0[i];
+      #20;
+    end
+  $finish;
+  end
 
 endmodule

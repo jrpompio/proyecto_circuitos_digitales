@@ -15,7 +15,7 @@ wire Z; // Se define el pin Z
     "\n A=%b B=%b Z=%b \n",
     A0,
     B0,
-    Z);
+    N0);
   end 
 
   tester #(K) instancia_datos( // Uso del tester
