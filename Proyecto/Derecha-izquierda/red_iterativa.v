@@ -2,7 +2,7 @@
 `include "celda_tipica.v"
 `include "celda_final.v"
 
-module red_iterativa #(parameter K = 1) (
+module red_iterativa #(parameter K = 5) (
   input [K-1:0] A, 
   input [K-1:0] B,
   output [K-1:0] N,
@@ -21,7 +21,7 @@ module red_iterativa #(parameter K = 1) (
   genvar i;
 
   generate
-    if (K > 1) begin
+    //if (K > 1) begin
     for (i = 1; i < K-1; i = i + 1) begin : serie_tipica
       Tipica_DI tipico(
         .n(N[i-1]),  // Conectar la salida de la instancia anterior a la entrada n en el tipico actual
@@ -30,17 +30,18 @@ module red_iterativa #(parameter K = 1) (
         .N(N[i])
       );
     end
-    end
+    //end
   endgenerate
   
   // Módulo final para comparar el bit más significativo
-  if (K > 1) begin
+//  if (K > 1) begin
   Final_DI final(
     .n(N[K-2]),  // Conectar la salida del último Tipica_DI a la entrada n en el Final_DI
     .A(A[K-1]),
     .B(B[K-1]),
     .Z(N[K-1])
   );
-  end
+  // end
   assign Z = N[K-1];
+
 endmodule

@@ -3,7 +3,7 @@
 
 module testbench;
 
-localparam K = 2;
+localparam K = 4;
 
 wire [K-1:0] A0, B0, N0;
 wire Z;
