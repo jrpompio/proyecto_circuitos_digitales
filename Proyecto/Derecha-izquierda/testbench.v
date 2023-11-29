@@ -10,7 +10,12 @@ wire Z;
 
   initial begin
     $dumpvars;
-    $monitor("A=%b B=%b Z=%b", A0, B0, Z);
+    $monitor(
+    "\n Los valores ingresados son:",
+    "\n A=%b B=%b Z=%b \n",
+    A0,
+    B0,
+    Z);
   end 
 
   tester #(K) instancia_datos(
